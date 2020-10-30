@@ -1,6 +1,6 @@
 # `eslint-plugin-redos`
 
-> ESLint plugin for catching ReDoS vulnerability
+> ESLint plugin for catching ReDoS vulnerability.
 
 ## Installation
 
