@@ -1,0 +1,22 @@
+name: NPM Release
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@master
+        with:
+          node-version: 15.0.1
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          package: package.json
+          token: ${{ secrets.NPM_TOKEN }}
