@@ -19,7 +19,7 @@ Then, in your `.eslintrc.json`:
 }
 ```
 
-This plugin contains an only rule `'redos/no-vulnerable'`.
+This plugin contains the only rule `'redos/no-vulnerable'`.
 
 ## Options
 
