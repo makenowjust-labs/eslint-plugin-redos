@@ -71,7 +71,7 @@ The default value is `5000` (5 seconds).
 
 ## Related Projects
 
-  - [@makenowjust-labo/redos](https://github.com/MakeNowJust-Labo/redos): a ReDoS detection library using in this plugin.
+  - [@makenowjust-labo/redos](https://github.com/MakeNowJust-Labo/redos): a ReDoS detection library used in this plugin.
 
 ## License
 
