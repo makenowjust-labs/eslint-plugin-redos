@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-redos",
-  "description": "An eslint plugin to detect ReDoS vulnerable RegExp literal",
+  "description": "ESLint plugin for catching ReDoS vulnerability",
   "license": "MIT",
   "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
   "version": "0.1.0",
@@ -31,9 +31,11 @@
   },
   "keywords": [
     "eslint",
+    "eslint-plugin",
     "eslintplugin",
     "redos",
-    "regexp"
+    "regexp",
+    "security"
   ],
   "jest": {
     "transform": {
