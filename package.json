@@ -18,6 +18,9 @@
     "@makenowjust-labo/redos": "^0.1.1",
     "inflected": "^2.1.0"
   },
+  "peerDependencies": {
+    "eslint": ">= 7"
+  },
   "devDependencies": {
     "@types/eslint": "^7.2.4",
     "@types/inflected": "^1.1.29",
