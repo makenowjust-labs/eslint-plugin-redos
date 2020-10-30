@@ -1,6 +1,9 @@
-# `eslint-plugin-redos`
+# eslint-plugin-redos
 
 > ESLint plugin for catching ReDoS vulnerability.
+
+[![CI Status](https://img.shields.io/github/workflow/status/MakeNowJust-Labo/eslint-plugin-redos/Node/master?logo=github&style=for-the-badge)](https://github.com/MakeNowJust-Labo/eslint-plugin-redos/actions)
+[![npm (scoped)](https://img.shields.io/npm/v/eslint-plugin-redos?logo=javascript&style=for-the-badge)](https://www.npmjs.com/package/eslint-plugin-redos)
 
 ## Installation
 
