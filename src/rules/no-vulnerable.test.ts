@@ -5,7 +5,25 @@ import rule from "./no-vulnerable";
 const tester = new RuleTester({ parserOptions: { ecmaVersion: 2015 } });
 
 tester.run("no-vulnerable", rule, {
-  valid: [{ code: `const x = /a/;` }],
+  valid: [
+    { code: `const x = /a/;` },
+    {
+      code: `const x = /^(a|a)*$/;`,
+      options: [{ permittableComplexities: ["exponential"] }],
+    },
+    {
+      code: `const x = /^a*a*$/;`,
+      options: [{ permittableComplexities: ["polynomial"] }],
+    },
+    {
+      code: `const x = /^a$/;`,
+      options: [{ timeout: null }],
+    },
+    {
+      code: `const x = /^a$/;`,
+      options: [{ timeout: 0 }],
+    },
+  ],
   invalid: [
     {
       code: `const x = /^(a|a)*$/;`,
@@ -15,6 +33,26 @@ tester.run("no-vulnerable", rule, {
       code: `const x = /^a*a*$/;`,
       errors: [
         { message: "Found a ReDoS vulnerable RegExp (2nd degree polynomial)." },
+      ],
+    },
+    {
+      code: `const x = /^a$/;`,
+      options: [{ timeout: 0, ignoreErrors: false }],
+      errors: [
+        {
+          message:
+            "Found an error on ReDoS vulnerable check: parse: flags (TimeoutException)",
+        },
+      ],
+    },
+    {
+      code: `const x = /^(?=a)$/;`,
+      options: [{ ignoreErrors: false }],
+      errors: [
+        {
+          message:
+            "Found an error on ReDoS vulnerable check: look-ahead assertion (UnsupportedException)",
+        },
       ],
     },
   ],
