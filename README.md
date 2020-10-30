@@ -61,7 +61,7 @@ It allows the following values.
 We strongly recommend considering `'polynomial'` matching complexity RegExp as ReDoS vulnerable.
 However, this option can disable it.
 
-### `time`
+### `timeout`
 
 This option specifies a time-out limit for ReDoS analyzing.
 A time-unit is milli-seconds.
