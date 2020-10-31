@@ -29,7 +29,9 @@ This plugin contains the only rule `redos/no-vulnerable`.
 
 ---
 
-# Disallow ReDoS vulnerable RegExp literals (`redos/no-vulnerable`)
+Disallow ReDoS vulnerable RegExp literals
+(`redos/no-vulnerable`)
+===
 
 ## Rule Details
 
