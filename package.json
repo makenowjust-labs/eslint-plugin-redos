@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib",
-    "lint": "prettier --list-different src/**/*.ts",
+    "lint": "prettier --list-different *.{json,md} src/**/*.ts",
     "test": "jest"
   },
   "dependencies": {

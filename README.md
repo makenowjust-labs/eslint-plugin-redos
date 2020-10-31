@@ -2,8 +2,8 @@
 
 > [ESLint][] plugin for catching [ReDoS][] vulnerability.
 
-[ESLint]: https://eslint.org
-[ReDoS]: https://en.wikipedia.org/wiki/ReDoS
+[eslint]: https://eslint.org
+[redos]: https://en.wikipedia.org/wiki/ReDoS
 
 [![CI Status](https://img.shields.io/github/workflow/status/MakeNowJust-Labo/eslint-plugin-redos/Node/master?logo=github&style=for-the-badge)](https://github.com/MakeNowJust-Labo/eslint-plugin-redos/actions)
 [![npm (scoped)](https://img.shields.io/npm/v/eslint-plugin-redos?logo=javascript&style=for-the-badge)](https://www.npmjs.com/package/eslint-plugin-redos)
@@ -27,7 +27,7 @@ Then, in your `.eslintrc.json`:
 
 This plugin contains the only rule `redos/no-vulnerable`.
 
-- - -
+---
 
 # Disallow ReDoS vulnerable RegExp literals (`redos/no-vulnerable`)
 
@@ -89,9 +89,9 @@ This flag is used to determine to ignore errors on ReDoS vulnerable detection.
 
 Errors on ReDoS vulnerable detection are:
 
-  - the pattern is invalid.
-  - the pattern is not supported to analyze.
-  - analysis is timeout.
+- the pattern is invalid.
+- the pattern is not supported to analyze.
+- analysis is timeout.
 
 They are ignored because they are noisy usually.
 
@@ -100,8 +100,8 @@ They are ignored because they are noisy usually.
 This array option controls permittable matching complexity.
 It allows the following values.
 
-  - `'polynomial'`
-  - `'exponential'`
+- `'polynomial'`
+- `'exponential'`
 
 We strongly recommend considering `'polynomial'` matching complexity RegExp as ReDoS vulnerable.
 However, this option can disable it.
@@ -116,9 +116,9 @@ The default value is `5000` (5 seconds).
 
 ## Related Projects
 
-  - [@makenowjust-labo/redos](https://makenowjust-labo.github.io/redos): a ReDoS detection library used in this plugin.
+- [@makenowjust-labo/redos](https://makenowjust-labo.github.io/redos): a ReDoS detection library used in this plugin.
 
-- - -
+---
 
 ## License
 
