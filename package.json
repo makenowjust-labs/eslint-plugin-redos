@@ -15,7 +15,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@makenowjust-labo/redos": "^0.1.1",
+    "@makenowjust-labo/redos": "^0.2.0",
     "inflected": "^2.1.0"
   },
   "peerDependencies": {

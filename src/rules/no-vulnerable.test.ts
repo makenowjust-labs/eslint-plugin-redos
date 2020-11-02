@@ -40,8 +40,7 @@ tester.run("no-vulnerable", rule, {
       options: [{ timeout: 0, ignoreErrors: false }],
       errors: [
         {
-          message:
-            "Found an error on ReDoS vulnerable check: parse: flags (TimeoutException)",
+          message: "Error on ReDoS vulnerablity check: timeout",
         },
       ],
     },
@@ -51,7 +50,7 @@ tester.run("no-vulnerable", rule, {
       errors: [
         {
           message:
-            "Found an error on ReDoS vulnerable check: look-ahead assertion (UnsupportedException)",
+            "Error on ReDoS vulnerablity check: look-ahead assertion (unsupported)",
         },
       ],
     },

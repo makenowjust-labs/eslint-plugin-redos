@@ -8,8 +8,6 @@ type Options = {
   timeout?: number | null;
 };
 
-const ExpectedException = /\((?:Timeout|Unsupported|InvalidRegExp)Exception\)/;
-
 const rule: Rule.RuleModule = {
   meta: {
     type: "problem",
@@ -54,44 +52,59 @@ const rule: Rule.RuleModule = {
           return;
         }
 
-        try {
-          const { source, flags } = node.value;
-          const result =
-            timeout != null
-              ? ReDoS.check(source, flags, timeout)
-              : ReDoS.check(source, flags);
-          switch (result.complexity) {
-            case "constant":
-            case "linear":
-              break; // safe
-            case "exponential":
-              if (permittableComplexities.includes("exponential")) break;
-              context.report({
-                message: "Found a ReDoS vulnerable RegExp (exponential).",
-                node,
-              });
+        const { source, flags } = node.value;
+        const result = ReDoS.check(source, flags, timeout ?? undefined);
+        switch (result.status) {
+          case "safe":
+            break;
+          case "vulnerable":
+            if (
+              result.complexity &&
+              permittableComplexities.includes(result.complexity?.type)
+            ) {
               break;
-            case "polynomial":
-              if (permittableComplexities.includes("polynomial")) break;
-              const degree = ordinalize(result.degree);
-              context.report({
-                message: `Found a ReDoS vulnerable RegExp (${degree} degree polynomial).`,
-                node,
-              });
-              break;
-          }
-        } catch (err) {
-          // Test `err` is expected exceptions.
-          if (err instanceof Error && ExpectedException.test(err.message)) {
-            if (!ignoreErrors) {
-              context.report({
-                message: `Found an error on ReDoS vulnerable check: ${err.message}`,
-                node,
-              });
             }
-            return;
-          }
-          throw err; // Re-throw.
+            switch (result.complexity?.type) {
+              case "exponential":
+                context.report({
+                  message: "Found a ReDoS vulnerable RegExp (exponential).",
+                  node,
+                });
+                break;
+              case "polynomial":
+                const degree = ordinalize(result.complexity.degree);
+                context.report({
+                  message: `Found a ReDoS vulnerable RegExp (${degree} degree polynomial).`,
+                  node,
+                });
+                break;
+              case undefined:
+                context.report({
+                  message: "Found a ReDoS vulnerable RegExp.",
+                  node,
+                });
+                break;
+            }
+            break;
+          case "unknown":
+            if (ignoreErrors) {
+              break;
+            }
+            switch (result.error.kind) {
+              case "timeout":
+                context.report({
+                  message: `Error on ReDoS vulnerablity check: timeout`,
+                  node,
+                });
+                break;
+              case "invalid":
+              case "unsupported":
+                context.report({
+                  message: `Error on ReDoS vulnerablity check: ${result.error.message} (${result.error.kind})`,
+                  node,
+                });
+                break;
+            }
         }
       },
     };
