@@ -40,8 +40,7 @@ tester.run("no-vulnerable", rule, {
       options: [{ timeout: 0, ignoreErrors: false }],
       errors: [
         {
-          message:
-            "Error on ReDoS vulnerablity check: timeout",
+          message: "Error on ReDoS vulnerablity check: timeout",
         },
       ],
     },

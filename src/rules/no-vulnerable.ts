@@ -53,27 +53,30 @@ const rule: Rule.RuleModule = {
         }
 
         const { source, flags } = node.value;
-        const result = ReDoS.check(source, flags, timeout ?? undefined)
+        const result = ReDoS.check(source, flags, timeout ?? undefined);
         switch (result.status) {
           case "safe":
             break;
           case "vulnerable":
-            if (result.complexity && permittableComplexities.includes(result.complexity?.type)) {
+            if (
+              result.complexity &&
+              permittableComplexities.includes(result.complexity?.type)
+            ) {
               break;
             }
             switch (result.complexity?.type) {
-              case 'exponential':
+              case "exponential":
                 context.report({
                   message: "Found a ReDoS vulnerable RegExp (exponential).",
                   node,
                 });
                 break;
-              case 'polynomial':
-                const degree = ordinalize(result.complexity.degree)
+              case "polynomial":
+                const degree = ordinalize(result.complexity.degree);
                 context.report({
                   message: `Found a ReDoS vulnerable RegExp (${degree} degree polynomial).`,
                   node,
-                })
+                });
                 break;
               case undefined:
                 context.report({
@@ -92,14 +95,14 @@ const rule: Rule.RuleModule = {
                 context.report({
                   message: `Error on ReDoS vulnerablity check: timeout`,
                   node,
-                })
+                });
                 break;
               case "invalid":
               case "unsupported":
                 context.report({
                   message: `Error on ReDoS vulnerablity check: ${result.error.message} (${result.error.kind})`,
                   node,
-                })
+                });
                 break;
             }
         }
