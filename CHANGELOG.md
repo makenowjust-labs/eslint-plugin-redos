@@ -4,6 +4,8 @@ Changes:
 
 - Relax `eslint` version constraint
 - Support `new RegExp` and `RegExp` syntax
+- Add `checker` option to specify a checker to use
+- Update `@makenowjust-labo/redos` to v1.0.1
 
 Fixes:
 
