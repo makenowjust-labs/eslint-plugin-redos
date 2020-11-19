@@ -15,11 +15,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "@makenowjust-labo/redos": "^0.2.0",
+    "@makenowjust-labo/redos": "^1.0.1",
     "inflected": "^2.1.0"
   },
   "peerDependencies": {
-    "eslint": ">= 7"
+    "eslint": ">= 3"
   },
   "devDependencies": {
     "@types/eslint": "^7.2.5",
