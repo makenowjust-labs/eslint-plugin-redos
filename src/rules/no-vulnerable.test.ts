@@ -23,6 +23,12 @@ tester.run("no-vulnerable", rule, {
       code: `const x = /^a$/;`,
       options: [{ timeout: 1000 }],
     },
+    {
+      code: `const x = new NotRegExp('^(a|a)*$');`,
+    },
+    {
+      code: `const x = NotRegExp('^(a|a)*$');`,
+    },
   ],
   invalid: [
     {
@@ -46,13 +52,29 @@ tester.run("no-vulnerable", rule, {
     },
     {
       code: `const x = /^(?=a)$/;`,
-      options: [{ checker: 'automaton', ignoreErrors: false }],
+      options: [{ checker: "automaton", ignoreErrors: false }],
       errors: [
         {
           message:
             "Error on ReDoS vulnerablity check: look-ahead assertion (unsupported)",
         },
       ],
+    },
+    {
+      code: `const x = new RegExp('^(a|a)*$');`,
+      errors: [{ message: "Found a ReDoS vulnerable RegExp (exponential)." }],
+    },
+    {
+      code: `const x = new RegExp('^(a|a)*$', '');`,
+      errors: [{ message: "Found a ReDoS vulnerable RegExp (exponential)." }],
+    },
+    {
+      code: `const x = RegExp('^(a|a)*$');`,
+      errors: [{ message: "Found a ReDoS vulnerable RegExp (exponential)." }],
+    },
+    {
+      code: `const x = RegExp('^(a|a)*$', '');`,
+      errors: [{ message: "Found a ReDoS vulnerable RegExp (exponential)." }],
     },
   ],
 });
