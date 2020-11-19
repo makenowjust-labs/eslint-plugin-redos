@@ -42,8 +42,8 @@ tester.run("no-vulnerable", rule, {
       ],
     },
     {
-      code: `const x = /^a{10}$/;`,
-      options: [{ timeout: 1, ignoreErrors: false }],
+      code: `const x = /^a$/;`,
+      options: [{ timeout: 0, ignoreErrors: false }],
       errors: [
         {
           message: "Error on ReDoS vulnerablity check: timeout",
