@@ -3,6 +3,7 @@
 Changes:
 
 - Relax `eslint` version constraint
+- Support `new RegExp` and `RegExp` syntax
 
 Fixes:
 
