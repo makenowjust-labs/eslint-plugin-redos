@@ -6,6 +6,7 @@ type Options = {
   ignoreErrors: boolean;
   permittableComplexities?: ("polynomial" | "exponential")[];
   timeout?: number | null;
+  checker?: 'hybrid' | 'automaton' | 'fuzz';
 };
 
 const rule: Rule.RuleModule = {
@@ -32,6 +33,10 @@ const rule: Rule.RuleModule = {
             type: ["number", "null"],
             minimum: 0,
           },
+          checker: {
+            type: "string",
+            enum: ["hybrid", "automaton", "fuzz"]
+          }
         },
         additionalProperties: false,
       },
@@ -43,6 +48,7 @@ const rule: Rule.RuleModule = {
       ignoreErrors = true,
       permittableComplexities = [],
       timeout = 5000,
+      checker = "hybrid",
     } = options;
 
     return {
@@ -53,7 +59,8 @@ const rule: Rule.RuleModule = {
         }
 
         const { source, flags } = node.value;
-        const result = ReDoS.check(source, flags, timeout ?? undefined);
+        const config = { timeout: timeout ?? undefined, checker };
+        const result = ReDoS.check(source, flags, config);
         switch (result.status) {
           case "safe":
             break;
