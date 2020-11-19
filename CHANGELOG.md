@@ -1,5 +1,9 @@
 # dev
 
+Changes:
+
+- Relax `eslint` version constraint
+
 Fixes:
 
 - Exclude test files from a build
