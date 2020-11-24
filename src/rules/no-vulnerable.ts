@@ -48,7 +48,7 @@ const rule: Rule.RuleModule = {
     const {
       ignoreErrors = true,
       permittableComplexities = [],
-      timeout = 5000,
+      timeout = 10000,
       checker = "hybrid",
     } = options;
     const config = { timeout: timeout ?? undefined, checker };

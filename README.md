@@ -79,7 +79,8 @@ The following is the default configuration.
     {
       "ignoreErrors": true,
       "permittableComplexities": [],
-      "timeout": 5000
+      "timeout": 10000,
+      "checker": "hybrid"
     }
   ]
 }
@@ -114,7 +115,7 @@ This option specifies a time-out limit for ReDoS analyzing.
 A time-unit is milli-seconds.
 If `null` is specified, it means unlimited time-out.
 
-The default value is `5000` (5 seconds).
+The default value is `10000` (10 seconds).
 
 ### `checker`
 
@@ -122,6 +123,8 @@ This option specifies a checker name to use.
 It is one of `'hybrid'`, `'automaton'` and `'fuzz'`.
 
 See [the `@makenowjust-labo/redos` documentation](https://github.com/MakeNowJust-Labo/redos/blob/master/packages/redos/README.md) for the detailed information.
+
+The default value is `'hybrid'`.
 
 ## Related Projects
 
