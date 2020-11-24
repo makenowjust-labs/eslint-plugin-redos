@@ -24,13 +24,13 @@
   "devDependencies": {
     "@types/eslint": "^7.2.5",
     "@types/inflected": "^1.1.29",
-    "@types/node": "^14.14.8",
-    "eslint": "^7.13.0",
+    "@types/node": "^14.14.9",
+    "eslint": "^7.14.0",
     "jest": "^26.6.3",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.4",
-    "typescript": "^4.0.5"
+    "typescript": "^4.1.2"
   },
   "keywords": [
     "eslint",
