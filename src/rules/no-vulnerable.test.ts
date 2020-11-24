@@ -51,7 +51,7 @@ tester.run("no-vulnerable", rule, {
       ],
     },
     {
-      code: `const x = /^(?=a)$/;`,
+      code: `const x = /^(?=a*)$/;`,
       options: [{ checker: "automaton", ignoreErrors: false }],
       errors: [
         {
