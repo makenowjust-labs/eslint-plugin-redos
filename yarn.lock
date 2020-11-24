@@ -493,10 +493,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@makenowjust-labo/redos@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@makenowjust-labo/redos/-/redos-1.0.1.tgz#178ce8038c21a9bc3cefe35fc6e54cd2505a6bfb"
-  integrity sha512-bc0dylI6LI2IywNbhytdlFp2qDx3UYhOba8SvnsTXyrhI9MNjOipg1m/XuAF58Q43oT/gcdFNsjjj3UO1zxkUQ==
+"@makenowjust-labo/redos@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@makenowjust-labo/redos/-/redos-1.1.1.tgz#95de1da57bdcfc78fcc9de15469f78b52134976d"
+  integrity sha512-tpOhowbEX5t2N/sB4plJ3i6b5J1OYo1R+FrpfnKnptYFk57NVULHq6dIFDw2DQp58JpojLxoCTSYmDs+eVmU9Q==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
