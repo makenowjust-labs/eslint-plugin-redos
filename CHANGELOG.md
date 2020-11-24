@@ -1,3 +1,10 @@
+# 1.1.0 (2020-11-24)
+
+Changes:
+
+- Update `@makenowjust-labo/redos` to v1.1.0
+- Increase `timeout` parameter to `10` second
+
 # 1.0.0 (2020-11-19)
 
 Changes:
