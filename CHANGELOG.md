@@ -1,3 +1,9 @@
+# 1.2.0 (2021-09-04)
+
+Changes:
+
+- Use `@makenowjust-labo/recheck` instead
+
 # 1.1.0 (2020-11-24)
 
 Changes:
