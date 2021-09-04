@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@makenowjust-labo/redos': ^1.1.1
+  '@makenowjust-labo/recheck': ^3.1.0
   '@types/eslint': ^7.2.5
   '@types/inflected': ^1.1.29
   '@types/node': 16.7.10
@@ -14,7 +14,7 @@ specifiers:
   typescript: ^4.1.2
 
 dependencies:
-  '@makenowjust-labo/redos': 1.2.0
+  '@makenowjust-labo/recheck': 3.1.0
   inflected: 2.1.0
 
 devDependencies:
@@ -616,8 +616,8 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@makenowjust-labo/redos/1.2.0:
-    resolution: {integrity: sha512-pAENGUm33V3t9pSYRKO3vkTTFJhY2G5iK1KSWaNzE3O25/0PzvxohHpHWu9kU8oRbgmstrdNeRZjvJhiTvkS6Q==}
+  /@makenowjust-labo/recheck/3.1.0:
+    resolution: {integrity: sha512-XScxA5y1/jzKRrSX65OY/xBerM4NhSIpLbg9Uzd205EFxBsBUTxkzDL8R4x6isV7aJpxCBTZs1xT1UxPBqfwCg==}
     dev: false
 
   /@sinonjs/commons/1.8.3:
