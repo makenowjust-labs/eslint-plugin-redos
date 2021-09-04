@@ -22,15 +22,15 @@
     "eslint": ">= 3"
   },
   "devDependencies": {
-    "@types/eslint": "^7.2.5",
-    "@types/inflected": "^1.1.29",
+    "@types/eslint": "7.28.0",
+    "@types/inflected": "1.1.29",
     "@types/node": "16.7.10",
-    "eslint": "^7.14.0",
+    "eslint": "7.32.0",
     "jest": "27.1.0",
-    "prettier": "^2.2.0",
-    "rimraf": "^3.0.2",
+    "prettier": "2.3.2",
+    "rimraf": "3.0.2",
     "ts-jest": "27.0.5",
-    "typescript": "^4.1.2"
+    "typescript": "4.4.2"
   },
   "keywords": [
     "eslint",
