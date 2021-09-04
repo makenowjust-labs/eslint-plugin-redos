@@ -1,6 +1,6 @@
 import { Rule } from "eslint";
 import type ESTree from "estree";
-import * as ReDoS from "@makenowjust-labo/redos";
+import * as ReDoS from "@makenowjust-labo/recheck";
 import { ordinalize } from "inflected";
 
 type Options = {
@@ -73,6 +73,7 @@ const rule: Rule.RuleModule = {
               });
               break;
             case "polynomial":
+              // TODO: use `result.complexity.summary` instead (type definition is missing currently).
               const degree = ordinalize(result.complexity.degree);
               context.report({
                 message: `Found a ReDoS vulnerable RegExp (${degree} degree polynomial).`,
