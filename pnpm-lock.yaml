@@ -11,7 +11,7 @@ specifiers:
   prettier: 2.4.0
   rimraf: 3.0.2
   ts-jest: 27.0.5
-  typescript: 4.4.2
+  typescript: 4.4.3
 
 dependencies:
   '@makenowjust-labo/recheck': 3.1.0
@@ -25,8 +25,8 @@ devDependencies:
   jest: 27.1.1
   prettier: 2.4.0
   rimraf: 3.0.2
-  ts-jest: 27.0.5_jest@27.1.1+typescript@4.4.2
-  typescript: 4.4.2
+  ts-jest: 27.0.5_jest@27.1.1+typescript@4.4.3
+  typescript: 4.4.3
 
 packages:
 
@@ -2885,7 +2885,7 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /ts-jest/27.0.5_jest@27.1.1+typescript@4.4.2:
+  /ts-jest/27.0.5_jest@27.1.1+typescript@4.4.3:
     resolution: {integrity: sha512-lIJApzfTaSSbtlksfFNHkWOzLJuuSm4faFAfo5kvzOiRAuoN4/eKxVJ2zEAho8aecE04qX6K1pAzfH5QHL1/8w==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -2911,7 +2911,7 @@ packages:
       lodash: 4.17.21
       make-error: 1.3.6
       semver: 7.3.5
-      typescript: 4.4.2
+      typescript: 4.4.3
       yargs-parser: 20.2.9
     dev: true
 
@@ -2950,8 +2950,8 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typescript/4.4.2:
-    resolution: {integrity: sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==}
+  /typescript/4.4.3:
+    resolution: {integrity: sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
