@@ -22,7 +22,7 @@
     "eslint": ">= 3"
   },
   "devDependencies": {
-    "@types/eslint": "7.29.0",
+    "@types/eslint": "8.2.0",
     "@types/inflected": "1.1.29",
     "@types/node": "16.11.7",
     "eslint": "8.2.0",
