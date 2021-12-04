@@ -1,3 +1,11 @@
+# Caution!
+
+# This repository's contents are integrated to [MakeNowJust-Labo/recheck](https://github.com/MakeNowJust-Labo/recheck/blob/main/packages/eslint-plugin-redos). Please move there to check the latest information.
+
+<details>
+
+<summary>The old README contents</summary>
+
 # eslint-plugin-redos
 
 > [ESLint][] plugin for catching [ReDoS][] vulnerability.
@@ -137,3 +145,5 @@ The default value is `'hybrid'`.
 MIT license.
 
 2020 (C) TSUYUSATO "MakeNowJust" Kitsune
+
+</details>
