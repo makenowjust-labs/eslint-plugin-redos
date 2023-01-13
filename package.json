@@ -22,10 +22,10 @@
     "eslint": ">= 3"
   },
   "devDependencies": {
-    "@types/eslint": "8.2.0",
+    "@types/eslint": "8.2.1",
     "@types/inflected": "1.1.29",
     "@types/node": "16.11.10",
-    "eslint": "8.3.0",
+    "eslint": "8.4.0",
     "jest": "27.3.1",
     "prettier": "2.4.1",
     "rimraf": "3.0.2",
